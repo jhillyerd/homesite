@@ -1,13 +1,21 @@
 import {html, render} from 'lit-html';
 
-const services = ["one", "two", "three"].map((s) => ({ "name": s }));
+function main() {
+  listServices();
+}
 
-const entry = (service) => html`
-  <li>name=${service.name}</li>
-`;
+function listServices() {
+  const services = ["one", "two", "three"].map((s) => ({ "name": s }));
 
-const entries = html`
-  <ol>${services.map(entry)}</ol>
-`;
+  const entry = (service) => html`
+    <li>name=${service.name}</li>
+  `;
 
-render(entries, document.getElementById('serviceList'));
+  const entries = html`
+    <ol>${services.map(entry)}</ol>
+  `;
+
+  render(entries, document.getElementById('serviceList'));
+}
+
+window.onload = main;
