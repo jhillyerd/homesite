@@ -1,0 +1,11 @@
+{
+  "services": [
+    {
+      "name": "Grafana",
+      "host": "nexus",
+      "port": 3000,
+      "path": "/",
+      "proto": "http"
+    }
+  ]
+}
