@@ -23,13 +23,15 @@ function main() {
 
 // Creates links for the configured services.
 function listServices(services) {
+  const icon = (s) => s.icon ? html`<i class="fa fa-${s.icon}"></i>&nbsp;` : "";
+
   // Define templates.
   const entries = (ss) => html`
     <ul>${ss.map(entry)}</ul>
   `;
 
   const entry = (s) => html`
-    <li><a href=${serviceURL(s)}>${s.name}</a></li>
+    <li>${icon(s)}<a href=${serviceURL(s)}>${s.name}</a></li>
   `;
 
   // Render service list.

@@ -5,13 +5,15 @@
       "host": "nexus",
       "port": 3000,
       "path": "/",
-      "proto": "http"
+      "proto": "http",
+      "icon": "chart-area"
     },
     {
       "name": "OctoPrint",
       "host": "octopi.skynet.local",
       "path": "/",
-      "proto": "http"
+      "proto": "http",
+      "icon": "cube"
     }
   ]
 }
