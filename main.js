@@ -1,4 +1,4 @@
-// import {html, render} from 'https://unpkg.com/lit-html?module';
+import {html, render} from 'lit-html';
 
 const services = ["one", "two", "three"].map((s) => ({ "name": s }));
 

@@ -22,6 +22,7 @@
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
+    "lit-html": "^1.2.1",
     "opensans-npm-webfont": "^1.0.0"
   }
 }
