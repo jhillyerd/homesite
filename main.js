@@ -1,5 +1,7 @@
 import {html, render} from "lit-html";
 
+import "@fortawesome/fontawesome-free/css/all.css";
+
 const urls = {
   data: buildURL("/config/data.json"),
 };
