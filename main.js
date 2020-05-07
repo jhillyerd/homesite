@@ -1,6 +1,8 @@
 import {html, render} from "lit-html";
 
+// Style imports.
 import "@fortawesome/fontawesome-free/css/all.css";
+import "opensans-npm-webfont/open_sans.css";
 
 const urls = {
   data: buildURL("/config/data.json"),

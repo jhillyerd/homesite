@@ -1,5 +1,3 @@
-@import './node_modules/opensans-npm-webfont/open_sans.css';
-
 :root {
   --bg-color: #333;
   --bg-grad: linear-gradient(150deg, #222, #533);
