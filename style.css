@@ -10,6 +10,13 @@
   font-size: 175%;
 }
 
+@media screen and (min-width: 1000px) {
+  :root {
+    --button-border: 0.05rem solid #999;
+    font-size: 100%;
+  }
+}
+
 body, h1, h2, h3, h4, table {
   font-family: 'Open Sans';
 }
@@ -38,24 +45,6 @@ a:hover {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 1000px) {
-  :root {
-    --button-border: 1px solid #999;
-  }
-
-  h1 {
-    font-size: 30px;
-  }
-
-  h2 {
-    font-size: 22px;
-  }
-
-  body {
-    padding: 10px;
-  }
-}
-
 /* Service List */
 
 .serviceList {
@@ -79,7 +68,7 @@ a:hover {
   border: var(--button-border);
   color: var(--button-fg);
   display: block;
-  padding: 0.9rem 0.8rem 0.6rem 0.8rem;
+  padding: 1rem 0.8rem 0.6rem 0.8rem;
   text-align: center;
 }
 
@@ -104,23 +93,4 @@ a:hover {
   font-weight: 900;
   font-size: 0.8rem;
   white-space: nowrap;
-}
-
-@media screen and (min-width: 1000px) {
-  .serviceList li {
-    flex-basis: 100px;
-  }
-
-  .serviceList a {
-    border-radius: 12px;
-    padding: 10px;
-  }
-
-  .serviceIcon {
-    font-size: 48px;
-  }
-
-  .serviceLabel {
-    font-size: 14px;
-  }
 }
