@@ -1,3 +1,5 @@
+/* Global */
+
 :root {
   --bg-color: #333;
   --bg-grad: linear-gradient(150deg, #222, #522);
@@ -43,6 +45,24 @@ a:hover {
   font-size: 9px;
 }
 
+@media screen and (min-width: 1000px) {
+  :root {
+    --button-border: 1px solid #999;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  body {
+    padding: 10px;
+  }
+}
+
 /* Service List */
 
 .serviceList {
@@ -70,6 +90,11 @@ a:hover {
   text-align: center;
 }
 
+.serviceList a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
 .serviceList a:active {
   text-decoration: none;
   background: var(--button-fg);
@@ -86,4 +111,23 @@ a:hover {
   font-weight: 900;
   font-size: 20px;
   white-space: nowrap;
+}
+
+@media screen and (min-width: 1000px) {
+  .serviceList li {
+    flex-basis: 100px;
+  }
+
+  .serviceList a {
+    border-radius: 12px;
+    padding: 10px;
+  }
+
+  .serviceIcon {
+    font-size: 48px;
+  }
+
+  .serviceLabel {
+    font-size: 14px;
+  }
 }
