@@ -64,19 +64,24 @@ a:hover {
   background: var(--button-bg);
   border-radius: 20px;
   border: var(--button-border);
+  color: var(--button-fg);
   display: block;
   padding: 20px;
   text-align: center;
 }
 
+.serviceList a:active {
+  text-decoration: none;
+  background: var(--button-fg);
+  color: var(--button-bg);
+}
+
 .serviceIcon {
-  color: var(--button-fg);
   font-size: 96px;
   margin-bottom: 10px;
 }
 
 .serviceLabel {
-  color: var(--button-fg);
   display: block;
   font-weight: 900;
   font-size: 20px;
