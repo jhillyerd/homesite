@@ -14,6 +14,48 @@
       "path": "/",
       "proto": "http",
       "icon": "cube"
+    },
+    {
+      "name": "Test Service 1",
+      "host": "nexus",
+      "path": "/",
+      "proto": "http",
+      "icon": "phone"
+    },
+    {
+      "name": "Test Service 2",
+      "host": "nexus",
+      "path": "/",
+      "proto": "http",
+      "icon": "horse"
+    },
+    {
+      "name": "Test Service 3",
+      "host": "nexus",
+      "path": "/",
+      "proto": "http",
+      "icon": "calculator"
+    },
+    {
+      "name": "Test Service 4",
+      "host": "nexus",
+      "path": "/",
+      "proto": "http",
+      "icon": "bath"
+    },
+    {
+      "name": "Test Service 5",
+      "host": "nexus",
+      "path": "/",
+      "proto": "http",
+      "icon": "paperclip"
+    },
+    {
+      "name": "Test Service 6",
+      "host": "nexus",
+      "path": "/",
+      "proto": "http",
+      "icon": "award"
     }
   ]
 }

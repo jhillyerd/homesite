@@ -11,7 +11,7 @@ const urls = {
 
 // Entrypoint, called when page has finished loading.
 function main() {
-  const servicesNode = document.getElementById("serviceList");
+  const servicesNode = document.getElementById("serviceListContainer");
 
   // Load dynamic configuration data and setup the page.
   fetchJson(urls.data, (configData) => {
