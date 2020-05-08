@@ -1,35 +1,32 @@
-/* Global */
+/* Global, mobile first */
 
 :root {
   --bg-color: #333;
   --bg-grad: linear-gradient(150deg, #222, #522);
   --fg-color: #ddd;
   --button-bg: #bbb;
-  --button-border: 2px solid #999;
+  --button-border: 0.125rem solid #999;
   --button-fg: #333;
+  font-size: 175%;
 }
 
-body, h1, h2, h3, h4 {
+body, h1, h2, h3, h4, table {
   font-family: 'Open Sans';
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 2rem;
   margin-top: 0;
 }
 
 h2 {
-  font-size: 36px;
-}
-
-body, table {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 body {
   background: fixed var(--bg-grad), var(--bg-color);
   color: var(--fg-color);
-  padding: 20px;
+  padding: 0.7rem;
 }
 
 a {
@@ -39,10 +36,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-.debugInfo {
-  font-size: 9px;
 }
 
 @media screen and (min-width: 1000px) {
@@ -75,18 +68,18 @@ a:hover {
 
 .serviceList li {
   display: block;
-  flex-basis: 140px;
+  flex-basis: 7rem;
   flex-grow: 1;
-  margin: 10px;
+  margin: 0.3rem;
 }
 
 .serviceList a {
   background: var(--button-bg);
-  border-radius: 20px;
+  border-radius: 0.7rem;
   border: var(--button-border);
   color: var(--button-fg);
   display: block;
-  padding: 20px;
+  padding: 0.9rem 0.8rem 0.6rem 0.8rem;
   text-align: center;
 }
 
@@ -102,14 +95,14 @@ a:hover {
 }
 
 .serviceIcon {
-  font-size: 96px;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
 }
 
 .serviceLabel {
   display: block;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 0.8rem;
   white-space: nowrap;
 }
 
