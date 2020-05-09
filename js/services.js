@@ -7,15 +7,13 @@ const defaultPorts = {
 
 // Renders links for the configured services into target DOM node.
 export default function renderServices(targetNode, services) {
-  const icon = (s) => s.icon ? html`<i class="serviceIcon fa fa-${s.icon}"></i>` : "";
-
   // Define templates.
   const entries = (ss) => html`
     <ul class="serviceList">
       ${ss.map((s) => html`
         <li>
           <a href=${serviceUrl(s)}>
-            ${icon(s)}
+            <i class="serviceIcon fa fa-${s.icon || 'question-circle'}"></i>
             <span class="serviceLabel">${s.name}</span>
           </a>
         </li>

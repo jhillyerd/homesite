@@ -16,6 +16,12 @@
       "icon": "cube"
     },
     {
+      "name": "Unknown Svc",
+      "host": "nexus",
+      "path": "/",
+      "proto": "http"
+    },
+    {
       "name": "Test Service 1",
       "host": "nexus",
       "path": "/",
