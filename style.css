@@ -10,10 +10,27 @@
   font-size: 175%;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 50rem) and (pointer: fine) {
   :root {
     --button-border: 0.05rem solid #999;
     font-size: 100%;
+  }
+
+  .pageContainer {
+    display: grid;
+    grid-template:
+      ". header   ." auto
+      ". services ." auto
+      ". footer   ." auto
+      / auto minmax(50em, 60em) auto;
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  .servicesArea {
+    grid-area: services;
   }
 }
 
