@@ -25,6 +25,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
     "lit-html": "^1.2.1",
-    "opensans-npm-webfont": "^1.0.0"
+    "opensans-npm-webfont": "^1.0.0",
+    "typescript": "^3.8.3"
   }
 }
