@@ -14,7 +14,7 @@ const urls = {
 };
 
 // Entrypoint, called when page has finished loading.
-function main(): void {
+async function main(): Promise<void> {
   const servicesId = "serviceListContainer";
   const servicesEl = document.getElementById(servicesId);
   if (servicesEl == null) {
@@ -23,9 +23,9 @@ function main(): void {
   }
 
   // Load dynamic configuration data and setup the page.
-  fetch(urls.data).
-    then((res: Response) => res.json()).
-    then((config: ConfigData) => renderServices(servicesEl, config.services));
+  const res = await fetch(urls.data);
+  const config: ConfigData = await res.json();
+  renderServices(servicesEl, config.services);
 }
 
 // Returns a URL pointing to `path` on the originating server.
