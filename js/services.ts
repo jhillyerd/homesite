@@ -5,7 +5,7 @@ const defaultPorts = new Map([
   [ "https", 443 ],
 ]);
 
-interface Service {
+export interface Service {
   name: string;
   host: string;
   port: number;
@@ -15,7 +15,7 @@ interface Service {
 }
 
 // Renders links for the configured services into target DOM node.
-export default function renderServices(targetNode: HTMLElement, services: Service[]) {
+export function renderServices(targetNode: HTMLElement, services: Service[]): void {
   // Define templates.
   const entries = (ss: Service[]) => html`
     <ul class="serviceList">
@@ -35,7 +35,7 @@ export default function renderServices(targetNode: HTMLElement, services: Servic
 }
 
 // Generates a URL for the provided service `s`.
-function serviceUrl(s: Service) {
+function serviceUrl(s: Service): string {
   const useDefaultPort = s.port == null || s.port == defaultPorts.get(s.proto);
   return `${s.proto}://${s.host}${useDefaultPort ? "" : ":" + s.port}${s.path}`;
 }

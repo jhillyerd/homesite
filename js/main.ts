@@ -1,5 +1,9 @@
 import {html, render} from "lit-html";
-import renderServices from "./services.ts";
+import {Service, renderServices} from "./services";
+
+interface ConfigData {
+  services: Service[],
+}
 
 // Style imports.
 import "@fortawesome/fontawesome-free/css/all.css";
@@ -10,22 +14,27 @@ const urls = {
 };
 
 // Entrypoint, called when page has finished loading.
-function main() {
-  const servicesNode = document.getElementById("serviceListContainer");
+function main(): void {
+  const servicesId = "serviceListContainer";
+  const servicesEl = document.getElementById(servicesId);
+  if (servicesEl == null) {
+    console.log(`ID ${servicesId} not found.`);
+    return;
+  }
 
   // Load dynamic configuration data and setup the page.
-  fetchJson(urls.data, (configData) => {
-    renderServices(servicesNode, configData.services)
+  fetchJson(urls.data, (configData: ConfigData) => {
+    renderServices(servicesEl, configData.services)
   });
 }
 
 // Returns a URL pointing to `path` on the originating server.
-function buildURL(path) {
+function buildURL(path: string): string {
   return window.location.origin + path;
 }
 
 // Fetch the `url`, parse the response as JSON, and call `success(obj)`.
-function fetchJson(url, success) {
+function fetchJson(url: string, success: (data: any) => void): void {
   const request = new XMLHttpRequest();
   request.onreadystatechange = () => {
     if (request.readyState == 4 && request.status == 200) {
