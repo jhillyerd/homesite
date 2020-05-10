@@ -23,26 +23,14 @@ function main(): void {
   }
 
   // Load dynamic configuration data and setup the page.
-  fetchJson(urls.data, (configData: ConfigData) => {
-    renderServices(servicesEl, configData.services)
-  });
+  fetch(urls.data).
+    then((res: Response) => res.json()).
+    then((config: ConfigData) => renderServices(servicesEl, config.services));
 }
 
 // Returns a URL pointing to `path` on the originating server.
 function buildURL(path: string): string {
   return window.location.origin + path;
-}
-
-// Fetch the `url`, parse the response as JSON, and call `success(obj)`.
-function fetchJson(url: string, success: (data: any) => void): void {
-  const request = new XMLHttpRequest();
-  request.onreadystatechange = () => {
-    if (request.readyState == 4 && request.status == 200) {
-      success(JSON.parse(request.responseText));
-    }
-  };
-  request.open("GET", url, true);
-  request.send();
 }
 
 window.addEventListener("load", main);
