@@ -1,5 +1,5 @@
 import {html, render} from "lit-html";
-import renderServices from "./services.js";
+import renderServices from "./services.ts";
 
 // Style imports.
 import "@fortawesome/fontawesome-free/css/all.css";
