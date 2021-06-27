@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "Grafana",
-      "host": "nexus",
+      "host": "nexus.skynet.local",
       "port": 3000,
       "path": "/",
       "proto": "http",
