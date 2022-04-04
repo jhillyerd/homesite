@@ -1,5 +1,8 @@
 /* Global, mobile first */
 
+@import 'npm:@fortawesome/fontawesome-free/css/all.css';
+@import 'npm:opensans-npm-webfont/open_sans.css';
+
 :root {
   --bg-color: #333;
   --bg-grad: linear-gradient(150deg, #222, #522);
