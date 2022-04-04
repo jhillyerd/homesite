@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/jhillyerd/homesite#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel": "^2.0.0"
   },
   "browserslist": [
     "> 2%"
