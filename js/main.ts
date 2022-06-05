@@ -1,8 +1,8 @@
 import {html, render} from "lit-html";
-import {Service, renderServices} from "./services";
+import {Section, renderServices} from "./services";
 
 interface ConfigData {
-  services: Service[],
+  sections: Section[];
 }
 
 const urls = {
@@ -21,7 +21,7 @@ async function main(): Promise<void> {
   // Load dynamic configuration data and setup the page.
   const res = await fetch(urls.data);
   const config: ConfigData = await res.json();
-  renderServices(servicesEl, config.services);
+  renderServices(servicesEl, config.sections);
 }
 
 // Returns a URL pointing to `path` on the originating server.

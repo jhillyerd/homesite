@@ -1,67 +1,89 @@
 {
-  "services": [
+  "sections": [
     {
-      "name": "Grafana",
-      "host": "nexus.skynet.local",
-      "port": 3000,
-      "path": "/",
-      "proto": "http",
-      "icon": "chart-area"
+      "title": "Favorites",
+      "services": [
+        {
+          "name": "Google",
+          "host": "google.com",
+          "path": "/",
+          "proto": "https",
+          "icon": "g"
+        }
+      ]
     },
     {
-      "name": "OctoPrint",
-      "host": "octopi.skynet.local",
-      "path": "/",
-      "proto": "http",
-      "icon": "cube"
+      "title": "Services",
+      "services": [
+        {
+          "name": "Grafana",
+          "host": "nexus.skynet.local",
+          "port": 3000,
+          "path": "/",
+          "proto": "http",
+          "icon": "chart-area"
+        },
+        {
+          "name": "OctoPrint",
+          "host": "octopi.skynet.local",
+          "path": "/",
+          "proto": "http",
+          "icon": "cube"
+        },
+        {
+          "name": "Unknown Svc",
+          "host": "nexus",
+          "path": "/",
+          "proto": "http"
+        },
+        {
+          "name": "Test Service 1",
+          "host": "nexus",
+          "path": "/",
+          "proto": "http",
+          "icon": "phone"
+        },
+        {
+          "name": "Test Service 2",
+          "host": "nexus",
+          "path": "/",
+          "proto": "http",
+          "icon": "horse"
+        }
+      ]
     },
     {
-      "name": "Unknown Svc",
-      "host": "nexus",
-      "path": "/",
-      "proto": "http"
-    },
-    {
-      "name": "Test Service 1",
-      "host": "nexus",
-      "path": "/",
-      "proto": "http",
-      "icon": "phone"
-    },
-    {
-      "name": "Test Service 2",
-      "host": "nexus",
-      "path": "/",
-      "proto": "http",
-      "icon": "horse"
-    },
-    {
-      "name": "Test Service 3",
-      "host": "nexus",
-      "path": "/",
-      "proto": "http",
-      "icon": "calculator"
-    },
-    {
-      "name": "Test Service 4",
-      "host": "nexus",
-      "path": "/",
-      "proto": "http",
-      "icon": "bath"
-    },
-    {
-      "name": "Test Service 5",
-      "host": "nexus",
-      "path": "/",
-      "proto": "http",
-      "icon": "paperclip"
-    },
-    {
-      "name": "Test Service 6",
-      "host": "nexus",
-      "path": "/",
-      "proto": "http",
-      "icon": "award"
+      "title": "Infrastructure",
+      "services": [
+        {
+          "name": "Test Service 3",
+          "host": "nexus",
+          "path": "/",
+          "proto": "http",
+          "icon": "calculator"
+        },
+        {
+          "name": "Test Service 4",
+          "host": "nexus",
+          "path": "/",
+          "proto": "http",
+          "icon": "bath"
+        },
+        {
+          "name": "Test Service 5",
+          "host": "nexus",
+          "path": "/",
+          "proto": "http",
+          "icon": "paperclip"
+        },
+        {
+          "name": "Test Service 6",
+          "host": "nexus",
+          "path": "/",
+          "proto": "http",
+          "icon": "award"
+        }
+      ]
     }
   ]
 }

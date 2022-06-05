@@ -5,7 +5,12 @@ const defaultPorts = new Map([
   [ "https", 443 ],
 ]);
 
-export interface Service {
+export interface Section {
+  title: string;
+  services: Service[];
+}
+
+interface Service {
   name: string;
   host: string;
   port: number;
@@ -15,23 +20,29 @@ export interface Service {
 }
 
 // Renders links for the configured services into target DOM node.
-export function renderServices(targetNode: HTMLElement, services: Service[]): void {
+export function renderServices(targetNode: HTMLElement,
+                               sections: Section[]): void {
   // Define templates.
-  const entries = (ss: Service[]) => html`
+  const serviceTmpl = (s: Service) => html`
+    <li>
+      <a href=${serviceUrl(s)}>
+        <i class="serviceIcon fa fa-${s.icon || 'question-circle'}"></i>
+        <span class="serviceLabel">${s.name}</span>
+      </a>
+    </li>
+    `
+  const sectionTmpl = (section: Section) => html`
+    <h2>${section.title}</h2>
     <ul class="serviceList">
-      ${ss.map((s: Service) => html`
-        <li>
-          <a href=${serviceUrl(s)}>
-            <i class="serviceIcon fa fa-${s.icon || 'question-circle'}"></i>
-            <span class="serviceLabel">${s.name}</span>
-          </a>
-        </li>
-      `)}
+      ${section.services.map(serviceTmpl)}
     </ul>
   `;
 
-  // Render service list.
-  render(entries(services), targetNode);
+  const containerTmpl = (sections: Section[]) => html`
+    <div>${sections.map(sectionTmpl)}</div>
+  `;
+
+  render(containerTmpl(sections), targetNode);
 }
 
 // Generates a URL for the provided service `s`.
