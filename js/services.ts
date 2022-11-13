@@ -32,10 +32,12 @@ export function renderServices(targetNode: HTMLElement,
     </li>
     `
   const sectionTmpl = (section: Section) => html`
-    <h2>${section.title}</h2>
-    <ul class="serviceList">
-      ${section.services.map(serviceTmpl)}
-    </ul>
+    <section class="serviceSection">
+      <h2>${section.title}</h2>
+      <ul class="serviceList">
+        ${section.services.map(serviceTmpl)}
+      </ul>
+    </section>
   `;
 
   const containerTmpl = (sections: Section[]) => html`
