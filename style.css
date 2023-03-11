@@ -1,6 +1,5 @@
 /* Global, mobile first */
 
-@import 'npm:@fortawesome/fontawesome-free/css/all.css';
 @import 'npm:opensans-npm-webfont/open_sans.css';
 
 :root {
@@ -129,9 +128,9 @@ a:hover {
   color: var(--button-bg);
 }
 
-.serviceIcon {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+.serviceList img {
+  max-height: 4rem;
+  min-height: 4rem;
 }
 
 .serviceLabel {

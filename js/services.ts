@@ -26,7 +26,7 @@ export function renderServices(targetNode: HTMLElement,
   const serviceTmpl = (s: Service) => html`
     <li>
       <a href=${serviceUrl(s)}>
-        <i class="serviceIcon fa fa-${s.icon || 'question-circle'}"></i>
+        <img src="/icons/${s.icon || 'png/homebox.png'}">
         <span class="serviceLabel">${s.name}</span>
       </a>
     </li>

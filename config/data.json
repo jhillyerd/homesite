@@ -8,7 +8,7 @@
           "host": "google.com",
           "path": "/",
           "proto": "https",
-          "icon": "g"
+          "icon": "png/google.png"
         }
       ]
     },
@@ -21,14 +21,14 @@
           "port": 3000,
           "path": "/",
           "proto": "http",
-          "icon": "chart-area"
+          "icon": "svg/grafana.svg"
         },
         {
           "name": "OctoPrint",
           "host": "octopi.skynet.local",
           "path": "/",
           "proto": "http",
-          "icon": "cube"
+          "icon": "png/octoprint.png"
         },
         {
           "name": "Unknown Svc",
@@ -41,14 +41,14 @@
           "host": "nexus",
           "path": "/",
           "proto": "http",
-          "icon": "phone"
+          "icon": "svg/deno.svg"
         },
         {
           "name": "Test Service 2",
           "host": "nexus",
           "path": "/",
           "proto": "http",
-          "icon": "horse"
+          "icon": "svg/gitea.svg"
         }
       ]
     },
@@ -60,28 +60,28 @@
           "host": "nexus",
           "path": "/",
           "proto": "http",
-          "icon": "calculator"
+          "icon": "svg/nodered.svg"
         },
         {
           "name": "Test Service 4",
           "host": "nexus",
           "path": "/",
           "proto": "http",
-          "icon": "bath"
+          "icon": "svg/openwrt.svg"
         },
         {
           "name": "Test Service 5",
           "host": "nexus",
           "path": "/",
           "proto": "http",
-          "icon": "paperclip"
+          "icon": "svg/pihole.svg"
         },
         {
           "name": "Test Service 6",
           "host": "nexus",
           "path": "/",
           "proto": "http",
-          "icon": "award"
+          "icon": "svg/yacht.svg"
         }
       ]
     }

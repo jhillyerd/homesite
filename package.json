@@ -21,9 +21,10 @@
   },
   "homepage": "https://github.com/jhillyerd/homesite#readme",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^6.0.0",
+    "dashboard-icons": "https://github.com/walkxcode/dashboard-icons",
     "opensans-npm-webfont": "^1.0.0",
-    "parcel": "^2.0.0"
+    "parcel": "^2.0.0",
+    "parcel-reporter-static-files-copy": "^1.5.0"
   },
   "browserslist": [
     "> 2%"
@@ -31,5 +32,9 @@
   "dependencies": {
     "lit-html": "^1.2.1",
     "typescript": "^3.8.3"
+  },
+  "staticFiles": {
+    "staticPath": "node_modules/dashboard-icons",
+    "staticOutPath": "icons"
   }
 }
