@@ -26,14 +26,6 @@
       };
     }
     {
-      name = "_fortawesome_fontawesome_free___fontawesome_free_6.3.0.tgz";
-      path = fetchurl {
-        name = "_fortawesome_fontawesome_free___fontawesome_free_6.3.0.tgz";
-        url  = "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-6.3.0.tgz";
-        sha512 = "qVtd5i1Cc7cdrqnTWqTObKQHjPWAiRwjUPaXObaeNPcy7+WKxJumGBx66rfSFgK6LNpIasVKkEgW8oyf0tmPLA==";
-      };
-    }
-    {
       name = "_jridgewell_gen_mapping___gen_mapping_0.3.2.tgz";
       path = fetchurl {
         name = "_jridgewell_gen_mapping___gen_mapping_0.3.2.tgz";
@@ -842,6 +834,14 @@
       };
     }
     {
+      name = "walkxcode_dashboard_icons";
+      path = fetchurl {
+        name = "walkxcode_dashboard_icons";
+        url  = "https://github.com/walkxcode/dashboard-icons";
+        sha1 = "997f8e2631882df354e61e0af106aa19c8c73e0a";
+      };
+    }
+    {
       name = "detect_libc___detect_libc_1.0.3.tgz";
       path = fetchurl {
         name = "detect_libc___detect_libc_1.0.3.tgz";
@@ -1279,6 +1279,14 @@
         name = "ordered_binary___ordered_binary_1.4.0.tgz";
         url  = "https://registry.yarnpkg.com/ordered-binary/-/ordered-binary-1.4.0.tgz";
         sha512 = "EHQ/jk4/a9hLupIKxTfUsQRej1Yd/0QLQs3vGvIqg5ZtCYSzNhkzHoZc7Zf4e4kUlDaC3Uw8Q/1opOLNN2OKRQ==";
+      };
+    }
+    {
+      name = "parcel_reporter_static_files_copy___parcel_reporter_static_files_copy_1.5.0.tgz";
+      path = fetchurl {
+        name = "parcel_reporter_static_files_copy___parcel_reporter_static_files_copy_1.5.0.tgz";
+        url  = "https://registry.yarnpkg.com/parcel-reporter-static-files-copy/-/parcel-reporter-static-files-copy-1.5.0.tgz";
+        sha512 = "dsY3MQkbYSgEqS0/22vtD2mZtel8UC0ItH0ok8LmgFeCMTsdhyOtJgvt945ODIzu9lYc/sCIzksM8C77uSE3Fg==";
       };
     }
     {
