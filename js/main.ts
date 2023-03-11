@@ -1,4 +1,3 @@
-import {html, render} from "lit-html";
 import {Section, renderServices} from "./services";
 
 interface ConfigData {

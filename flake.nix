@@ -10,9 +10,8 @@
   outputs = { self, nixpkgs, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
       let pkgs = nixpkgs.legacyPackages.${system};
-      in {
-        devShell = pkgs.mkShell { packages = with pkgs; [ nodejs-14_x yarn ]; };
-
+      in
+      {
         defaultPackage = self.packages.${system}.homesite;
 
         packages.homesite = pkgs.mkYarnPackage {
@@ -37,6 +36,14 @@
             mkdir $out
             cp -v * $out/
           '';
+        };
+
+        devShell = with pkgs; mkShell {
+          packages = [
+            nodejs
+            nodePackages.typescript-language-server
+            yarn
+          ];
         };
       });
 }
