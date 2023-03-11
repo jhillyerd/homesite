@@ -834,13 +834,21 @@
       };
     }
     {
-      name = "walkxcode_dashboard_icons";
-      path = fetchurl {
-        name = "walkxcode_dashboard_icons";
-        url  = "https://github.com/walkxcode/dashboard-icons";
-        sha1 = "997f8e2631882df354e61e0af106aa19c8c73e0a";
-      };
-    }
+    name = "dashboard-icons";
+    path =
+      let
+        repo = fetchgit {
+          url = "https://github.com/walkxcode/dashboard-icons";
+          rev = "997f8e2631882df354e61e0af106aa19c8c73e0a";
+          sha256 = "0bd2cwxs2riqg4ix7gpycnvr6r9vh266k0f5h0xs4fs80ax4z25i";
+        };
+      in
+        runCommand "dashboard-icons" { buildInputs = [gnutar]; } ''
+          # Set u+w because tar-fs can't unpack archives with read-only dirs
+          # https://github.com/mafintosh/tar-fs/issues/79
+          tar cf $out --mode u+w -C ${repo} .
+        '';
+  }
     {
       name = "detect_libc___detect_libc_1.0.3.tgz";
       path = fetchurl {

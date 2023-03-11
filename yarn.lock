@@ -894,9 +894,9 @@ csso@^4.2.0:
   dependencies:
     css-tree "^1.1.2"
 
-"dashboard-icons@https://github.com/walkxcode/dashboard-icons":
+"dashboard-icons@git+https://github.com/walkxcode/dashboard-icons#997f8e2631882df354e61e0af106aa19c8c73e0a":
   version "0.0.0"
-  resolved "https://github.com/walkxcode/dashboard-icons#997f8e2631882df354e61e0af106aa19c8c73e0a"
+  resolved "git+https://github.com/walkxcode/dashboard-icons#997f8e2631882df354e61e0af106aa19c8c73e0a"
 
 detect-libc@^1.0.3:
   version "1.0.3"

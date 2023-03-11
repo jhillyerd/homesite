@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/jhillyerd/homesite#readme",
   "devDependencies": {
-    "dashboard-icons": "https://github.com/walkxcode/dashboard-icons",
+    "dashboard-icons": "git+https://github.com/walkxcode/dashboard-icons#997f8e2631882df354e61e0af106aa19c8c73e0a",
     "opensans-npm-webfont": "^1.0.0",
     "parcel": "^2.0.0",
     "parcel-reporter-static-files-copy": "^1.5.0"
