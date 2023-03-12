@@ -1,13 +1,16 @@
 {
-  description = "Home intranet website";
+  description = "My homelab intranet website";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
 
     flake-utils.url = "github:numtide/flake-utils";
+
+    icons.url = "github:walkxcode/dashboard-icons";
+    icons.flake = false;
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
+  outputs = { self, nixpkgs, flake-utils, icons }:
     flake-utils.lib.eachDefaultSystem (system:
       let pkgs = nixpkgs.legacyPackages.${system};
       in
@@ -28,13 +31,12 @@
           '';
 
           installPhase = ''
-            cd "deps/$pname/dist"
-            echo ======
-            pwd
-            find . -name index.html
-            echo ======
             mkdir $out
+
+            cd "deps/$pname/dist"
             cp -v * $out/
+
+            ln -s ${icons} $out/icons
           '';
         };
 

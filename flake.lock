@@ -15,6 +15,22 @@
         "type": "github"
       }
     },
+    "icons": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1678232250,
+        "narHash": "sha256-sYhPugJIO6I7gMWBaYyAO2WTt2X+vtMjeThmoTtnoi0=",
+        "owner": "walkxcode",
+        "repo": "dashboard-icons",
+        "rev": "997f8e2631882df354e61e0af106aa19c8c73e0a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "walkxcode",
+        "repo": "dashboard-icons",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1678426640,
@@ -34,6 +50,7 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
+        "icons": "icons",
         "nixpkgs": "nixpkgs"
       }
     }

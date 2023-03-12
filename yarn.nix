@@ -834,22 +834,6 @@
       };
     }
     {
-    name = "dashboard-icons";
-    path =
-      let
-        repo = fetchgit {
-          url = "https://github.com/walkxcode/dashboard-icons";
-          rev = "997f8e2631882df354e61e0af106aa19c8c73e0a";
-          sha256 = "0bd2cwxs2riqg4ix7gpycnvr6r9vh266k0f5h0xs4fs80ax4z25i";
-        };
-      in
-        runCommand "dashboard-icons" { buildInputs = [gnutar]; } ''
-          # Set u+w because tar-fs can't unpack archives with read-only dirs
-          # https://github.com/mafintosh/tar-fs/issues/79
-          tar cf $out --mode u+w -C ${repo} .
-        '';
-  }
-    {
       name = "detect_libc___detect_libc_1.0.3.tgz";
       path = fetchurl {
         name = "detect_libc___detect_libc_1.0.3.tgz";
@@ -1287,14 +1271,6 @@
         name = "ordered_binary___ordered_binary_1.4.0.tgz";
         url  = "https://registry.yarnpkg.com/ordered-binary/-/ordered-binary-1.4.0.tgz";
         sha512 = "EHQ/jk4/a9hLupIKxTfUsQRej1Yd/0QLQs3vGvIqg5ZtCYSzNhkzHoZc7Zf4e4kUlDaC3Uw8Q/1opOLNN2OKRQ==";
-      };
-    }
-    {
-      name = "parcel_reporter_static_files_copy___parcel_reporter_static_files_copy_1.5.0.tgz";
-      path = fetchurl {
-        name = "parcel_reporter_static_files_copy___parcel_reporter_static_files_copy_1.5.0.tgz";
-        url  = "https://registry.yarnpkg.com/parcel-reporter-static-files-copy/-/parcel-reporter-static-files-copy-1.5.0.tgz";
-        sha512 = "dsY3MQkbYSgEqS0/22vtD2mZtel8UC0ItH0ok8LmgFeCMTsdhyOtJgvt945ODIzu9lYc/sCIzksM8C77uSE3Fg==";
       };
     }
     {
