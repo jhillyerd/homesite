@@ -14,6 +14,6 @@ Configuration data is loaded from `config/data.json`.
 ## Developing
 
 ```sh
-yarn install
-yarn dev
+npm install
+npm run dev
 ```

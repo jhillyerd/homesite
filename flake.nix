@@ -17,23 +17,18 @@
       {
         defaultPackage = self.packages.${system}.homesite;
 
-        packages.homesite = pkgs.mkYarnPackage {
+        packages.homesite = pkgs.buildNpmPackage {
           name = "homesite";
           src = ./.;
-          yarNix = ./yarn.nix;
           extraBuildInputs = with pkgs; [ utillinux ];
 
-          phases =
-            [ "unpackPhase" "configurePhase" "buildPhase" "installPhase" ];
-
-          buildPhase = ''
-            yarn run build
-          '';
+          npmDepsHash = "sha256-9GWsEu7HKOmtVVmsOhyu+UUIccHGLHtP9XGJ9ixydQg=";
 
           installPhase = ''
             mkdir $out
 
-            cd "deps/$pname/dist"
+            ls
+            cd dist
             cp -v * $out/
 
             ln -s ${icons} $out/icons
@@ -44,7 +39,6 @@
           packages = [
             nodejs
             nodePackages.typescript-language-server
-            yarn
           ];
         };
       });
