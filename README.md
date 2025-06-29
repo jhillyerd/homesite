@@ -17,3 +17,11 @@ Configuration data is loaded from `config/data.json`.
 npm install
 npm run dev
 ```
+
+If you want to develop with icons, first run:
+
+```sh
+nix build .#
+cd dist
+ln -s ../result/icons
+```
