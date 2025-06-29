@@ -44,6 +44,27 @@
           "icon": "svg/deno.svg"
         },
         {
+          "name": "ArgoCD",
+          "host": "nexus",
+          "path": "/",
+          "proto": "http",
+          "icon": "svg/argo-cd.svg"
+        },
+        {
+          "name": "Consul",
+          "host": "nexus",
+          "path": "/",
+          "proto": "http",
+          "icon": "svg/consul.svg"
+        },
+        {
+          "name": "Fluidd",
+          "host": "nexus",
+          "path": "/",
+          "proto": "http",
+          "icon": "svg/fluidd.svg"
+        },
+        {
           "name": "Test Service 2",
           "host": "nexus",
           "path": "/",
@@ -60,7 +81,7 @@
           "host": "nexus",
           "path": "/",
           "proto": "http",
-          "icon": "svg/nodered.svg"
+          "icon": "svg/node-red.svg"
         },
         {
           "name": "Test Service 4",
@@ -74,7 +95,7 @@
           "host": "nexus",
           "path": "/",
           "proto": "http",
-          "icon": "svg/pihole.svg"
+          "icon": "svg/pi-hole.svg"
         },
         {
           "name": "Test Service 6",
