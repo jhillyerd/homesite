@@ -22,7 +22,7 @@
           src = ./.;
           extraBuildInputs = with pkgs; [ util-linux ];
 
-          npmDepsHash = "sha256-9HSuA2ETQ4OzGOQSSEV+Lv7nmKP5wTvqr5mMthcYfqE=";
+          npmDepsHash = "sha256-3hMk4snIkvSenmCimx9qhsstp4e3hedGRO9m9PscpR8=";
 
           installPhase = ''
             mkdir $out
