@@ -2,7 +2,7 @@
   description = "My homelab intranet website";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
 
     flake-utils.url = "github:numtide/flake-utils";
 
@@ -20,7 +20,7 @@
         packages.homesite = pkgs.buildNpmPackage {
           name = "homesite";
           src = ./.;
-          extraBuildInputs = with pkgs; [ utillinux ];
+          extraBuildInputs = with pkgs; [ util-linux ];
 
           npmDepsHash = "sha256-9HSuA2ETQ4OzGOQSSEV+Lv7nmKP5wTvqr5mMthcYfqE=";
 

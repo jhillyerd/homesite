@@ -21,11 +21,11 @@
     "icons": {
       "flake": false,
       "locked": {
-        "lastModified": 1750802622,
-        "narHash": "sha256-q0IGYcPrUcMfLW5ZV1af/uExkTvIcFKu4VJcdDMMiwU=",
+        "lastModified": 1771492566,
+        "narHash": "sha256-21gmWr9D9C9xNXu/53mNVW0xya6X0cqi8a5grElvJHQ=",
         "owner": "walkxcode",
         "repo": "dashboard-icons",
-        "rev": "92e341c1c681d3fcdbdebcf14fad670dba5e52d6",
+        "rev": "e04e6733106b65409e43623cd29a71974bad3bac",
         "type": "github"
       },
       "original": {
@@ -36,16 +36,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1750969886,
-        "narHash": "sha256-zW/OFnotiz/ndPFdebpo3X0CrbVNf22n4DjN2vxlb58=",
+        "lastModified": 1771419570,
+        "narHash": "sha256-bxAlQgre3pcQcaRUm/8A0v/X8d2nhfraWSFqVmMcBcU=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "a676066377a2fe7457369dd37c31fd2263b662f4",
+        "rev": "6d41bc27aaf7b6a3ba6b169db3bd5d6159cfaa47",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "nixos-25.05",
+        "ref": "nixos-25.11",
         "repo": "nixpkgs",
         "type": "github"
       }
