@@ -31,6 +31,10 @@
     grid-area: header;
   }
 
+  header h1 {
+    text-align: left;
+  }
+
   .servicesArea {
     grid-area: services;
   }
