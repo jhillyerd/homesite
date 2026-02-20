@@ -10,9 +10,17 @@
     icons.flake = false;
   };
 
-  outputs = { self, nixpkgs, flake-utils, icons }:
-    flake-utils.lib.eachDefaultSystem (system:
-      let pkgs = nixpkgs.legacyPackages.${system};
+  outputs =
+    {
+      self,
+      nixpkgs,
+      flake-utils,
+      icons,
+    }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
+      let
+        pkgs = nixpkgs.legacyPackages.${system};
       in
       {
         defaultPackage = self.packages.${system}.homesite;
@@ -35,11 +43,36 @@
           '';
         };
 
-        devShell = with pkgs; mkShell {
-          packages = [
-            nodejs
-            nodePackages.typescript-language-server
-          ];
+        devShell =
+          with pkgs;
+          mkShell {
+            packages = [
+              nodejs
+              nodePackages.typescript-language-server
+            ];
+          };
+
+        apps.update-npm-deps = {
+          type = "app";
+          program = toString (
+            pkgs.writeShellScript "update-npm-deps" ''
+              set -euo pipefail
+              echo "Setting fake hash to trigger fetch..."
+              ${pkgs.gnused}/bin/sed -i '/^\s*npmDepsHash = /s|"[^"]*"|"sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="|' flake.nix
+              echo "Building to fetch correct hash..."
+              output=$(${pkgs.nix}/bin/nix build .#homesite 2>&1 || true)
+              hash=$(echo "$output" | ${pkgs.gnugrep}/bin/grep -oP 'got:\s+\Ksha256-[a-zA-Z0-9+/=]+' | head -1)
+              if [ -n "$hash" ]; then
+                ${pkgs.gnused}/bin/sed -i '/^\s*npmDepsHash = /s|"[^"]*"|"'$hash'"|' flake.nix
+                echo "Updated npmDepsHash to $hash"
+              else
+                echo "Could not find hash in output:"
+                echo "$output"
+                exit 1
+              fi
+            ''
+          );
         };
-      });
+      }
+    );
 }
