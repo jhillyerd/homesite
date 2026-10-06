@@ -32,7 +32,14 @@
             src = ./.;
             extraBuildInputs = with pkgs; [ util-linux ];
 
-            npmDepsHash = "sha256-3hMk4snIkvSenmCimx9qhsstp4e3hedGRO9m9PscpR8=";
+            npmDepsHash = "sha256-gCa1Ag7jtRoNjVIt6oQdRHz6JbXwQ/v5rr1l3X/1NrM=";
+
+            # NOTE: @swc/core is pinned to 1.15.x via package.json `overrides`.
+            # @swc/core 1.16+ materializes its native addon into a cache dir
+            # with strict ownership checks that reject the nix sandbox (every
+            # writable path there has nobody-owned ancestors), failing with
+            # ERR_SWC_NATIVE_CACHE during `npm rebuild`. Drop the override once
+            # @swc/core builds under nix again.
 
             installPhase = ''
               mkdir $out
