@@ -21,31 +21,31 @@
     "icons": {
       "flake": false,
       "locked": {
-        "lastModified": 1771492566,
-        "narHash": "sha256-21gmWr9D9C9xNXu/53mNVW0xya6X0cqi8a5grElvJHQ=",
-        "owner": "walkxcode",
+        "lastModified": 1791011741,
+        "narHash": "sha256-pq3NhSjPV5ebyMOvOOcfNJxpdc2fDPN7V1x24tCgy/c=",
+        "owner": "homarr-labs",
         "repo": "dashboard-icons",
-        "rev": "e04e6733106b65409e43623cd29a71974bad3bac",
+        "rev": "adca944175c9a3eb0471f78a4da87f237476d585",
         "type": "github"
       },
       "original": {
-        "owner": "walkxcode",
+        "owner": "homarr-labs",
         "repo": "dashboard-icons",
         "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1771419570,
-        "narHash": "sha256-bxAlQgre3pcQcaRUm/8A0v/X8d2nhfraWSFqVmMcBcU=",
+        "lastModified": 1791143449,
+        "narHash": "sha256-9+n3ReS2y9xS199LoJjKUWHwZrISGHWgkD/LUZTDZyA=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "6d41bc27aaf7b6a3ba6b169db3bd5d6159cfaa47",
+        "rev": "0d9e9b832d03ac387417e16ce1febf73b2e631e1",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "nixos-25.11",
+        "ref": "nixos-26.05",
         "repo": "nixpkgs",
         "type": "github"
       }
