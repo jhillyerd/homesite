@@ -2,11 +2,12 @@
   description = "My homelab intranet website";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
 
     flake-utils.url = "github:numtide/flake-utils";
 
-    icons.url = "github:walkxcode/dashboard-icons";
+    icons.url = "github:homarr-labs/dashboard-icons";
+
     icons.flake = false;
   };
 
@@ -23,32 +24,34 @@
         pkgs = nixpkgs.legacyPackages.${system};
       in
       {
-        defaultPackage = self.packages.${system}.homesite;
+        packages = {
+          default = self.packages.${system}.homesite;
 
-        packages.homesite = pkgs.buildNpmPackage {
-          name = "homesite";
-          src = ./.;
-          extraBuildInputs = with pkgs; [ util-linux ];
+          homesite = pkgs.buildNpmPackage {
+            name = "homesite";
+            src = ./.;
+            extraBuildInputs = with pkgs; [ util-linux ];
 
-          npmDepsHash = "sha256-3hMk4snIkvSenmCimx9qhsstp4e3hedGRO9m9PscpR8=";
+            npmDepsHash = "sha256-3hMk4snIkvSenmCimx9qhsstp4e3hedGRO9m9PscpR8=";
 
-          installPhase = ''
-            mkdir $out
+            installPhase = ''
+              mkdir $out
 
-            ls
-            cd dist
-            cp -v * $out/
+              ls
+              cd dist
+              cp -v * $out/
 
-            ln -s ${icons} $out/icons
-          '';
+              ln -s ${icons} $out/icons
+            '';
+          };
         };
 
-        devShell =
+        devShells.default =
           with pkgs;
           mkShell {
             packages = [
               nodejs
-              nodePackages.typescript-language-server
+              typescript-language-server
             ];
           };
 
